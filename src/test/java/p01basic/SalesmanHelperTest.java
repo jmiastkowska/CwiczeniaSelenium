@@ -34,4 +34,6 @@ class SalesmanHelperTest {
         double expected = 1.33;
         assertEquals(expected,result);
     }
+
+ 
 }

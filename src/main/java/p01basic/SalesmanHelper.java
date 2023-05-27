@@ -16,10 +16,7 @@ public class SalesmanHelper {
 }
     public static double howMuchChange(double amountToCharge, double amountGiven){
         if (amountGiven>= amountToCharge){
-            double change = amountGiven % amountToCharge;
-            BigDecimal roundedChange = new BigDecimal(change).setScale(2, RoundingMode.HALF_UP);
-                    double result = roundedChange.doubleValue();
-            return result;
+            return amountGiven - amountToCharge;
         }
         return 0;
     }
