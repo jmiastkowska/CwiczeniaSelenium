@@ -20,6 +20,18 @@ class SalesmanHelperTest {
         int result =  SalesmanHelper.howMuchWillIBuy(100,10);
         int expected = 0;
         assertEquals(expected,result);
+    }
+    @Test
+    public void howMuchChange_customerEqualMoney_zeroChange(){
+        double result =  SalesmanHelper.howMuchChange(100,100);
+        double expected = 0;
+        assertEquals(expected,result);
+    }
 
+    @Test
+    public void howMuchChange_customerEqualMoney_calculatedChange(){
+        double result =  SalesmanHelper.howMuchChange(8.67,10);
+        double expected = 1.33;
+        assertEquals(expected,result);
     }
 }

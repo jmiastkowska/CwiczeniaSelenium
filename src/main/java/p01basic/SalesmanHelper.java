@@ -1,5 +1,8 @@
 package p01basic;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class SalesmanHelper {
     public static int howMuchWillIBuy(double productCost, double customerMoney){
    /*
@@ -12,7 +15,12 @@ public class SalesmanHelper {
     return 0;
 }
     public static double howMuchChange(double amountToCharge, double amountGiven){
-        // TODO: 20.05.2023 zaimplementujmetode  
+        if (amountGiven>= amountToCharge){
+            double change = amountGiven % amountToCharge;
+            BigDecimal roundedChange = new BigDecimal(change).setScale(2, RoundingMode.HALF_UP);
+                    double result = roundedChange.doubleValue();
+            return result;
+        }
         return 0;
     }
 }
