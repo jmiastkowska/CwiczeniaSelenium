@@ -35,5 +35,8 @@ class SalesmanHelperTest {
         assertEquals(expected,result);
     }
 
- 
+    @Test
+    public void howMuchChange_customerCanBuy3product(){
+
+    }
 }
