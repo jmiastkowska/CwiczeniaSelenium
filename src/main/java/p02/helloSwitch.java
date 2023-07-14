@@ -21,7 +21,7 @@ public class helloSwitch {
             default:
                 System.out.println("błędny dzień");
         }
-            System.out.println("--------------");
+            System.out.println("-----------");
             System.out.println(dayNumberToString(dayNo));
     }
     public static String dayNumberToString (int dayNo){
