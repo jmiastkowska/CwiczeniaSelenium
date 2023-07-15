@@ -1,5 +1,7 @@
 package p02;
 
+import java.util.Arrays;
+
 public class helloFor {
     public static void main(String[] args) {
         int limit = 3;
@@ -15,6 +17,13 @@ public class helloFor {
          */
         for (int licznik = 0; licznik < 3; licznik++) {
             System.out.println("hej");
+            System.out.println("----------");
         }
+
+        String[] owoce = new String[]{"malina", "jerzyna","gruszka"};
+        for( int index = 0; index< owoce.length; index++){
+            System.out.println(owoce[index]);
+        }
+
     }
 }
