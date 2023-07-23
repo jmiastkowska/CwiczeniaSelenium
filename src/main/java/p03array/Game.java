@@ -11,6 +11,7 @@ public class Game {
 
 
 
+
     public static void printBoard(){
         for (int row=0; row<board.length; row++){
             System.out.println((row+1)+ ":"+(Arrays.toString(board[row])));
