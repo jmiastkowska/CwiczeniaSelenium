@@ -11,12 +11,16 @@ public class Game {
     };
 
 static char currentSymbol = 'X';
+static boolean gameFinished = false;
 
-    public static void printBoard(){
+    public static String convertBoardToStringRepresentationAndPrintIt(){
+        String boardAsString = "";
         for (int row=0; row<board.length; row++){
-            System.out.println((row+1)+ ":"+(Arrays.toString(board[row])));
+            boardAsString += (row+1)+ ":"+ Arrays.toString(board[row])+"\n";
         }
-        System.out.println("   1  2  3");
+        boardAsString += "   1  2  3";
+        System.out.println(boardAsString);
+        return boardAsString;
     }
 
     public static void move(){
@@ -40,10 +44,17 @@ static char currentSymbol = 'X';
     public static void main(String[] args) {
       //  int wiek = readInt( "Podaj wiek");
 
-        printBoard();
+      /*  printBoard();
         move();
         printBoard();
         move();
         printBoard();
+        ale mozna petle for aby byla kontrola konca wypelniania
+       */
+
+       for(int i=0; i<9;i++){
+           convertBoardToStringRepresentationAndPrintIt();
+           move();
+       }
     }
 }
