@@ -11,7 +11,7 @@ public class Game {
     };
 
 static char currentSymbol = 'X';
-static boolean gameFinished = false;
+
 
     public static String convertBoardToStringRepresentationAndPrintIt(){
         String boardAsString = "";
@@ -38,8 +38,26 @@ static boolean gameFinished = false;
             currentSymbol='X';
         }
     }
+    public static void wyswietlPlansze() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(board[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+  public static boolean isGameFinished(char[][] board){
+       for (int i=0; i<3; i++){
+           for (int j=0; j<3; j++){
+               if(board[i][j] == ' '){
+                   return false;
+               }
+           }
+       }
 
-
+       System.out.println("Koniec gry. Zagrasz jeszcze raz?");
+    return false;
+    }
 
     public static void main(String[] args) {
       //  int wiek = readInt( "Podaj wiek");
@@ -55,6 +73,9 @@ static boolean gameFinished = false;
        for(int i=0; i<9;i++){
            convertBoardToStringRepresentationAndPrintIt();
            move();
+           wyswietlPlansze();
+           isGameFinished(board);
        }
+
     }
 }
