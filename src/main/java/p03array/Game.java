@@ -76,6 +76,5 @@ static char currentSymbol = 'X';
            wyswietlPlansze();
            isGameFinished(board);
        }
-
     }
 }
