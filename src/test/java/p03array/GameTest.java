@@ -1,8 +1,10 @@
 package p03array;
 
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static p03array.Game.getDiagonals;
 
 public class GameTest {
 
@@ -34,4 +36,22 @@ public class GameTest {
                 "   1  2  3";
         assertEquals(expectedRepresentation, boardStringRepresentation);
     }
+
+    @Test
+    public void getDiagonalsTest() {
+        char[][] board = {
+                {'X', 'O', 'X'},
+                {'X', 'O', 'X'},
+                {'O', 'O', 'O'}
+        };
+        String[] check = getDiagonals(board);
+        String[] expected = new String[]{"XOO","XOO"};
+        Assertions.assertArrayEquals(expected, check);
+    }
+
+
+
+
+
+
 }

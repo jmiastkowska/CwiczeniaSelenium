@@ -59,6 +59,14 @@ static char currentSymbol = 'X';
     return false;
     }
 
+    public static String[] getDiagonals(char [][] board) {
+        String[] diagonals = new String[2];
+        diagonals[0] = String.valueOf(board[0][0]) + String.valueOf(board[1][1] + String.valueOf(board[2][2]));
+        diagonals[1] = String.valueOf(board[0][2]) + String.valueOf(board[1][1]+ String.valueOf(board[2][0]));
+        return diagonals;
+    }
+
+
     public static void main(String[] args) {
       //  int wiek = readInt( "Podaj wiek");
 
