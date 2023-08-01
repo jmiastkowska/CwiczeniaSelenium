@@ -48,10 +48,5 @@ public class GameTest {
         String[] expected = new String[]{"XOO","XOO"};
         Assertions.assertArrayEquals(expected, check);
     }
-
-
-
-
-
-
+    
 }
