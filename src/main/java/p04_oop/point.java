@@ -1,14 +1,17 @@
 package p04_oop;
 
-import javax.swing.text.MutableAttributeSet;
-import java.awt.*;
 
-public class point {
+
+public class Point {
     private double x,y;  //wartoscidomyslne 0,0
 
     public Point(int someX,int someY){
         x= someX;
         y= someY;
+    }
+
+    public Point() {
+
     }
 
     public double distanceFrom(Point otherPoint){

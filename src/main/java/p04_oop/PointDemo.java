@@ -1,10 +1,10 @@
 package p04_oop;
 
-import java.awt.*;
+
 
 public class PointDemo {
     public static void main(String[] args){
-        point p1 = new Point();  //konstruktor bezparamterowy
+        Point p1 = new Point();  //konstruktor bezparamterowy
         System.out.println(p1.getX() + " " + p1.getY());
 
         //przypisywanie wartosci
@@ -16,7 +16,10 @@ public class PointDemo {
         System.out.println(punktAsi.getX() + " " + punktAsi.getY());
 
 
-        double distance = punktAsi.distanceFrom(p1);
-        System.out.println(distance);
+        double distance1 = punktAsi.distanceFrom(p1);
+        System.out.println(distance1);
+
+        double distance2 = PointUtils.distance(punktAsi,p1);
+        System.out.println(distance2);
     }
 }
