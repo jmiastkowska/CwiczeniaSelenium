@@ -5,9 +5,12 @@ package p04_oop;
 public class Point {
     private double x,y;  //wartoscidomyslne 0,0
 
+    private int quarter;
+
     public Point(int someX,int someY){
         x= someX;
         y= someY;
+        quarter = (int) (Math.random()*4+1);
     }
 
     public Point() {
