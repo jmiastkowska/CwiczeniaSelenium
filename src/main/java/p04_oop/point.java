@@ -1,6 +1,7 @@
 package p04_oop;
 
 
+import java.util.Objects;
 
 public class Point {
     private double x,y;  //wartoscidomyslne 0,0
@@ -41,14 +42,7 @@ public class Point {
         this.y = y;
     }
 
-    @Override
-    public boolean equals(Object obj){
-        if(obj== null) return false;
-        if(getClass() == obj.getClass()){
-
-        }
-        x==obj.x && y==obj.y;
-
-        return (this == obj);
+    public String toString(){
+    return "Point("+x+","+y+")";
     }
 }

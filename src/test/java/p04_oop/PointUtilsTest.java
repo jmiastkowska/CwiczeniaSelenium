@@ -11,8 +11,8 @@ class PointUtilsTest {
         Point p1 = new Point(3,4);
         Point result = PointUtils.mirrorPointXAxis(p1);
         Point expected= new Point(-3,4);
-        //assertEquals(expected, result);
-        assertTrue(expected.equals(result));
+        assertEquals(expected, result);
+        //assertTrue(expected.equals(result));
     }
 
 
