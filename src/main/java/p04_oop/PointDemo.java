@@ -21,5 +21,7 @@ public class PointDemo {
 
         double distance2 = PointUtils.distance(punktAsi,p1);
         System.out.println(distance2);
+
+        p1.equals(punktAsi);
     }
 }

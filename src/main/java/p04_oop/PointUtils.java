@@ -8,4 +8,11 @@ public class PointUtils {
         );
     }
 
+    public static Point mirrorPointXAxis(Point pointToMirror){
+        return new Point(pointToMirror.getX(),pointToMirror.getY());
+    }
+
+
+
+
 }

@@ -7,7 +7,7 @@ public class Point {
 
     private int quarter;
 
-    public Point(int someX,int someY){
+    public Point(double someX, double someY){
         x= someX;
         y= someY;
         quarter = (int) (Math.random()*4+1);
@@ -39,5 +39,16 @@ public class Point {
 
     public void setY(double y) {
         this.y = y;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if(obj== null) return false;
+        if(getClass() == obj.getClass()){
+
+        }
+        x==obj.x && y==obj.y;
+
+        return (this == obj);
     }
 }
