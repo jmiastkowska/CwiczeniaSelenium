@@ -2,11 +2,18 @@ package p03array;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static p03array.Game.getDiagonals;
 
 public class GameTest {
+    PrintStream originalOut = System.out;
+    ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Test
     public void convertBoardToStringRepresentationAndPrintIt_boardIsEmpty_printStringAsWithinTemplation(){
@@ -48,5 +55,11 @@ public class GameTest {
         String[] expected = new String[]{"XOO","XOO"};
         Assertions.assertArrayEquals(expected, check);
     }
-    
+    @Test
+     public void checkIfFinishMessageIsDisplayed() {
+        Game.isGameFinished();
+        String expectedMessage = "Koniec gry. Zagrasz jeszcze raz?";
+
+        assertEquals(expectedMessage, outContent.toString().trim());
+        }
 }
