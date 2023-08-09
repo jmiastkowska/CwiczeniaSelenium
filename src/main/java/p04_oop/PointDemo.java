@@ -23,5 +23,6 @@ public class PointDemo {
         System.out.println(distance2);
 
         p1.equals(punktAsi);
+        System.out.println(punktAsi);
     }
 }

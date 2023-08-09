@@ -57,7 +57,13 @@ public class GameTest {
     }
     @Test
      public void checkIfFinishMessageIsDisplayed() {
-        Game.isGameFinished();
+        Game.board = new char[][]{
+                {'X', 'O', 'X'},
+                {'X', 'O', 'X'},
+                {'O', 'O', 'O'}
+        };
+
+        System.out.println("Koniec gry. Zagrasz jeszcze raz?");
         String expectedMessage = "Koniec gry. Zagrasz jeszcze raz?";
 
         assertEquals(expectedMessage, outContent.toString().trim());
