@@ -42,7 +42,12 @@ public class Point {
         this.y = y;
     }
 
-    public String toString(){
-    return "Point("+x+","+y+")";
+    @Override
+    public String toString() {
+        return "Point{" +
+                "x=" + x +
+                ", y=" + y +
+                ", quarter=" + quarter +
+                '}';
     }
 }
