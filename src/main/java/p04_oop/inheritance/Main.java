@@ -12,6 +12,21 @@ public class Main {
         Animal someAnimal = new Dog(3, "Burek");
         someAnimal.makeSound();
 
+        Animal[]animals = {
+                new Cat(2, "c1"),
+                new Dog(2, "C1"),
+                new Cat(2, "c1"),
+                new Dog(2, "C1"),
+        };
 
+        System.out.println("---------");
+        makeSomeNoise(animals);
+    }
+
+
+    public static void makeSomeNoise(Animal[] animals){
+        for(Animal animal : animals){
+            animal.makeSound();
+        }
     }
 }
