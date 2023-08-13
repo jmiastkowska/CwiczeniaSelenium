@@ -5,8 +5,8 @@ public class LoanCalculator {
     int noOfMonth;
     double interestRate;
     String type;
-    static double capitalPartAggregator = 0;
-    static double currentInterestPart = 0;
+    double capitalPartAggregator = 0;
+    double currentInterestPart = 0;
 
     static String[] AVAILABLE_TYPES= {"EQUAL","DESCENDING"};
     public LoanCalculator(double amount, int noOfMonth, double interestRate, String type) {
@@ -46,21 +46,21 @@ public class LoanCalculator {
         return outcome;
     }
 
-    public static double loanInstalment(){
+    public double loanInstalment(){
         double a = this.amount;
         double b = this.interestRate;
         double n = this.noOfMonth;
         return (a*(b/12)*Math.pow(1+(b/12),n))/(Math.pow(1+(b/12),n)-1);
     }
 
-    private double loanInstalmentCapitalPart(LoanCalculator loanCalculator) {
-        double result = loanInstalment(this) - currentInterestPart;
+    private double loanInstalmentCapitalPart() {
+        double result = loanInstalment() - currentInterestPart;
         capitalPartAggregator += result;
         return result;
 
     }
 
-    private double loanInstalmentInterestPart(LoanCalculator loanCalculator) {
+    private double loanInstalmentInterestPart() {
         double result = (amount - capitalPartAggregator) * interestRate/12;
         currentInterestPart = result;
         return result;
