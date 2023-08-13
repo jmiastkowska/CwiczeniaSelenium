@@ -1,33 +1,35 @@
 package p04_oop;
 
+import java.util.Arrays;
+
 public class LoanCalculator {
     double amount;
     int noOfMonth;
     double interestRate;
-    String type;
+    LoanTypes type;
     double capitalPartAggregator = 0;
     double currentInterestPart = 0;
 
     static String[] AVAILABLE_TYPES= {"EQUAL","DESCENDING"};
-    public LoanCalculator(double amount, int noOfMonth, double interestRate, String type) {
+    public LoanCalculator(double amount, int noOfMonth, double interestRate, LoanTypes type) {
         this.amount = amount;
         this.noOfMonth = noOfMonth;
         this.interestRate = interestRate;
         this.type = type;
     }
 
-    public static double totalCost(LoanCalculator loanCalculator){
+    public double totalCost(LoanCalculator loanCalculator){
         if(loanCalculator.type == LoanTypes.EQUALS){
 
-            return loanInstalment(loanCalculator) * loanCalculator.noOfMonth;
+            return loanInstalment() * loanCalculator.noOfMonth;
         } else if(loanCalculator.type == LoanTypes.DESCENDING){
             return -2;
         }
         return -3;
     }
 
-    public static double moneyRemainToPay(LoanCalculator loanCalculator, int monthNum){
-        return totalCost(loanCalculator) - (monthNum) * loanInstalment(loanCalculator);
+    public double moneyRemainToPay(LoanCalculator loanCalculator, int monthNum){
+        return totalCost(loanCalculator) - (monthNum) * loanInstalment();
     }
 
 
@@ -66,8 +68,11 @@ public class LoanCalculator {
         return result;
     }
 
-    public static double getInstalmentPart(double[] instalmentData, String part){
+    public static void getInstalmentPart(double[] instalmentData, String part){
+        }
 
+    public static void main(String[] args) {
+        LoanCalculator myloan = new LoanCalculator(200000.00, 200, 3600, LoanTypes.EQUALS);
+        System.out.println(Arrays.deepToString(myloan.generateSchedule()));
     }
-
 }

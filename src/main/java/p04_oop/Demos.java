@@ -1,10 +1,10 @@
 package p04_oop;
 
 import java.util.Arrays;
-
+/*
 public class Demos {
     public static void main(String[] args) {
-        LoanCalculator loan = new LoanCalculator(300_000,360, 8.8,LoanTypes.EQUALS);
+        LoanCalculator loan = new LoanCalculator(300_000,360, 8.8, LoanTypes.EQUALS);
 
     Instalment[][] instalments = loan.generateSchedule();
 
@@ -18,3 +18,4 @@ public class Demos {
 
     }
 }
+*/
