@@ -6,9 +6,10 @@ public class Main {
         list.add(4);
         list.add(7);
         list.add(9);
-
+        list.add(9);
 
         System.out.println(list);
+        System.out.println(list.get(4));
        /*
        System.out.println(list.size());
 
