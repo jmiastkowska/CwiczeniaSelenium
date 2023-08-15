@@ -3,11 +3,14 @@ package p04_oop.interfaces.stringExample;
 public class Main {
     public static void main(String[] args) {
         String [] names = {"Adam","Ewa","Michal","Adi","eWa"};
-        printWomenOnly(names);
-        System.out.println("----------");
-        printMenOnly(names);
-        System.out.println("----------");
-        printNamesOnly(names);
+     //   printWomenOnly(names);
+     //   System.out.println("----------");
+     //   printMenOnly(names);
+    //    System.out.println("----------");
+     //   printNamesOnly(names);
+
+
+        printXXXOnly(names, new WomanStringTester());
     }
 
     public static void printWomenOnly(String[]names){
@@ -37,5 +40,12 @@ public class Main {
             }
         }
     }
+    public static void printXXXOnly(String[]names,StringTester stringTester){
+        for (String name:names){
 
+            if(stringTester.acceptTheString(name)){
+                System.out.println(name);
+            }
+        }
+    }
 }
