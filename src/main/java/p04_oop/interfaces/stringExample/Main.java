@@ -10,7 +10,30 @@ public class Main {
      //   printNamesOnly(names);
 
 
-        printXXXOnly(names, new WomanStringTester());
+        //printXXXOnly(names, new WomanStringTester());
+        //printXXXOnly(names, new MenStringTester());
+        printXXXOnly(names, new StringTester(){
+            @Override
+            public boolean acceptTheString(String string){
+                return string.toLowerCase().endsWith("a");
+            }
+        });
+
+        //jezeli intefejs ma tylko jedna metode funkcyjna to mozna zapisac krocej
+        //jako lambda
+        printXXXOnly(names,(string) -> {return string.toLowerCase().endsWith("a");});
+
+
+
+    }
+
+    public static void printXXXOnly(String[]names,StringTester stringTester){
+        for (String name:names){
+
+            if(stringTester.acceptTheString(name)){
+                System.out.println(name);
+            }
+        }
     }
 
     public static void printWomenOnly(String[]names){
@@ -40,12 +63,5 @@ public class Main {
             }
         }
     }
-    public static void printXXXOnly(String[]names,StringTester stringTester){
-        for (String name:names){
 
-            if(stringTester.acceptTheString(name)){
-                System.out.println(name);
-            }
-        }
-    }
 }
