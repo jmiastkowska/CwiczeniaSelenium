@@ -22,9 +22,10 @@ public class Main {
         //jezeli intefejs ma tylko jedna metode funkcyjna to mozna zapisac krocej
         //jako lambda
         printXXXOnly(names,(string) -> {return string.toLowerCase().endsWith("a");});
-
-
-
+        printXXXOnly(names,string -> {return string.toLowerCase().endsWith("a");});
+        printXXXOnly(names,string -> string.toLowerCase().endsWith("a"));  //mozna skrocic do takiej formy jezeli jest tylko jedno wyrazenie (tu string)
+        StringTester myStringTester = string -> string.toLowerCase().endsWith("a");
+        printXXXOnly(names, myStringTester);
     }
 
     public static void printXXXOnly(String[]names,StringTester stringTester){
