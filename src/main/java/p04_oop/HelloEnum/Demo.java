@@ -1,9 +1,12 @@
 package p04_oop.HelloEnum;
 
-import static p04_oop.HelloEnum.Month.*;
-
 public class Demo {
     public static void main(String[] args) {
-        Month m1 = new APR;
+        Month jan = Month.APR;
+        int daysInJanuary = jan.daysCount();
+        String valueFromUser= "FEB";
+        Month feb = Month.valueOf(valueFromUser);
+
+        Month mar = Month.valueOf("MAR");
     }
 }
