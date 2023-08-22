@@ -9,6 +9,8 @@ public class MinStatCalculator implements StatCalculator {
             if(number<min){
             min = number;
         }
+        }
+
         return new Statistic("min", min);
     }
 }

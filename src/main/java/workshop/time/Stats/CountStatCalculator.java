@@ -4,8 +4,6 @@ public class CountStatCalculator implements StatCalculator {
 
     @Override
     public Statistic calculate(int[] numbers){
-
-
-        return new ;
+            return new Statistic("count", Double.valueOf(numbers.length));
+        }
     }
-}
