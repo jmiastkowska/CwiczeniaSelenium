@@ -26,7 +26,5 @@ public class Demo {
         String removeElement = stringList.remove(0);
         System.out.println("we removed " + removeElement);
         System.out.println(stringList);
-
-
     }
 }
