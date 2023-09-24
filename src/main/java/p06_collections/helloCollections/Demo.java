@@ -45,7 +45,13 @@ public class Demo {
         listFromArray.add("d");
         System.out.println(listFromArray); //a,b,c,d
 
-
+    //Queue
+        Queue<String> queue = new LinkedList<>();
+        queue.poll();
+        Deque<String> deque = new LinkedList<>();
+        deque.push("e");
+        deque.pollFirst();
+        deque.poll();
 
 
     }
