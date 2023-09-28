@@ -10,6 +10,13 @@ public class Main {
         studentSet.add(new Student("124", "A2","B2"));
         studentSet.add(new Student("125", "A3","B3"));
 
+
+        System.out.println("Adrian".hashCode());
     System.out.println(studentSet);
+
+        String string = "FB";
+        String string2 = "Ea";
+        System.out.println(string.hashCode());
+        System.out.println(string2.hashCode());
     }
 }
