@@ -31,10 +31,15 @@ public class Point implements Comparable<Point>{        //interfejs sluzacy do p
         return Objects.hash(x, y);
     }
 
-
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
     @Override
     public int compareTo(Point o) {
-        if(x>0.x) return 1;
+        if(x>o.x) return 1;
         else if(x==o.x) return 0;
     return -1;
     }
