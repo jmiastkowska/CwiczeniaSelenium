@@ -26,5 +26,33 @@ public class Demo {
         String removeElement = stringList.remove(0);
         System.out.println("we removed " + removeElement);
         System.out.println(stringList);
+
+        //set  -skupia sie na unikalnosci (niekoniecznie na kolejnosci)
+        System.out.println("-----set----");
+        Set<String> stringSet = new HashSet<>();  //new linkedHashSet
+        stringSet.add("ala");
+        stringSet.add("ala");
+        stringSet.add("ma");
+        stringSet.add("kota");
+        System.out.println(stringSet);
+
+        List<String> listFromSet= new ArrayList <>(stringSet);
+        listFromSet.get(0);
+        // z tablicy do listy
+        String[] arr = {"a","b","c"};
+        List<String> listFromArray = new ArrayList<>(Arrays.asList(arr));
+        List<String> listFromArray2 = Arrays.asList(arr);
+        listFromArray.add("d");
+        System.out.println(listFromArray); //a,b,c,d
+
+    //Queue
+        Queue<String> queue = new LinkedList<>();
+        queue.poll();
+        Deque<String> deque = new LinkedList<>();
+        deque.push("e");
+        deque.pollFirst();
+        deque.poll();
+
+
     }
 }
