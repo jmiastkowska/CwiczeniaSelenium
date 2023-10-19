@@ -1,7 +1,4 @@
-package workshop.time;
-
-import lombok.val;
-import p04_oop.interfaces.stringExample.StringTester;
+package workshop.time.TimeCwicz;
 
 import java.util.Objects;
 

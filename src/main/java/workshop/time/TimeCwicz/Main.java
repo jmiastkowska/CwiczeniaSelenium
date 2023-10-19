@@ -1,4 +1,4 @@
-package workshop.time;
+package workshop.time.TimeCwicz;
 
 public class Main {
     public static void main(String[] args) {
