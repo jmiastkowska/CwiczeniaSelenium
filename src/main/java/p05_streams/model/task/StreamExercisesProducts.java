@@ -15,7 +15,7 @@ public class StreamExercisesProducts {
         printProducts(PRODUCTS);
 
 
-        //1. wypisz wszystkiezerwone ubrania
+        //1. wypisz wszystkie czerwone ubrania
         System.out.println("===zad1 ====");
         PRODUCTS.stream()
                 .filter(p -> p.getColor().equals(ProductColor.RED))

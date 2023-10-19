@@ -1,16 +1,15 @@
 package workshop.time.zadanieDomowe;
 
-import p06_collections.helloCollections.HashCodeExample.Student;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cart implements Iterable<Product> {
     private List<Product> products = new ArrayList<>();
 
     public void addProduct(Product productToAdd) {
-       addProduct(productToAdd);
+               products.add(productToAdd);
     }
 
     public void addProduct(Product productToAdd, int amount) {
@@ -26,7 +25,10 @@ public class Cart implements Iterable<Product> {
         return totalSum;
     }
 
-    public void getProductsList() {
+    public List<String> getProductsList() {
+        return products.stream()
+                .map(product -> product.getName() + " :::1 unit::: " + product.getPrice()).collect(Collectors.toList());
+
     }
 
     public void deleteProduct(String productName) {

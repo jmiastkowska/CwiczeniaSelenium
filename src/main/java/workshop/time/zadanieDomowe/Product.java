@@ -4,9 +4,8 @@ public class Product {
 
     private final String name;
     private final double price;
+    private Object String;
 
-
-    }
 
     public Product(String name, double price) {
         this.name = name;
@@ -76,13 +75,5 @@ cart.getTotalSum() // 1x10 + 3x15 = 10 + 45 = 55
         */
 
 
-
-
-
-
-
-
-
-
-
+    }
 }

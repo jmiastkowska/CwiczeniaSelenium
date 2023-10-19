@@ -17,13 +17,13 @@ public class Main {
 
 
 
-        cart.getTotalSum(); // 1x10 + 3x15 = 10 + 45 = 55
+       System.out.println("Total sum is:" +cart.getTotalSum()); // 1x10 + 3x15 = 10 + 45 = 55
+
+
+
+        System.out.println(cart.getProductsList()); // zwraca string "cheese ::: 1 unit ::: 10; shoe ::: 3 units ::: 45"
+
 /*
-
-
-        cart.getProductsList() // zwraca string "cheese ::: 1 unit ::: 10; shoe ::: 3 units ::: 45"
-
-
 
 
 
@@ -31,8 +31,8 @@ public class Main {
 
 
 */
-        cart.deleteProduct("cheese");
-        cart.deleteAllProducts();
+      //  cart.deleteProduct("cheese");
+       // cart.deleteAllProducts();
 
 /*
         cart.getTotalSum() // 0
