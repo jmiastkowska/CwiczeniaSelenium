@@ -17,7 +17,7 @@ public class Main {
 
 
 
-       System.out.println("Total sum is:" +cart.getTotalSum()); // 1x10 + 3x15 = 10 + 45 = 55
+       System.out.println("Total sum is:" + cart.getTotalSum()); // 1x10 + 3x15 = 10 + 45 = 55
 
 
 
