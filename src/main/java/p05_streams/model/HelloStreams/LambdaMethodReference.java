@@ -18,7 +18,7 @@ public class LambdaMethodReference {
                     }
                 })
                 .map(s -> s.toUpperCase())
-                // obiekty w strumieniu posiadaja jakas metode to mozna ja po prostu wywolac 
+                // obiekty w strumieniu posiadaja jakas metode to mozna ja po prostu wywolac
                 .map(String::toLowerCase)
         .forEach(s -> System.out.println(s));
     }
