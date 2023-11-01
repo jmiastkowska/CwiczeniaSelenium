@@ -9,6 +9,10 @@ public class Product {
     private final ProductColor color;
     private final Map<ProductSize, Integer> stock;
 
+    public void print(){
+        System.out.println(this);
+    }
+    
     @Override
     public String toString() {
         return "Product{" +
