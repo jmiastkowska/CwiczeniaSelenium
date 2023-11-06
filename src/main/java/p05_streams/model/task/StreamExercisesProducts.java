@@ -73,7 +73,7 @@ public class StreamExercisesProducts {
     private static void printProducts(List<Product> products) {
     }
 
-}
+
 
 
 
@@ -137,9 +137,7 @@ public class StreamExercisesProducts {
 
     }
 
-    private static void printProducts(Product product) {
-        System.out.println(product);
-    }
+
 
 
 }
