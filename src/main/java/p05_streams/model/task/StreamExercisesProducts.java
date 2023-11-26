@@ -104,13 +104,13 @@ public class StreamExercisesProducts {
 
      private static List<Product> createProducts() {
             return Arrays.asList(
-         new Product(ProductColor.BLUE,"koszulka", "39,99",ProductType.FEMALE, (1, 5, 3, 0)),
-         new Product(ProductColor.BLUE,"koszulka", "39,99",ProductType.MALE, (1, 1, 1, 2)),
-         new Product(ProductColor.RED,"koszulka", "50",ProductType.MALE, (4, 1, 31, 1)),
-         new Product(ProductColor.YELLOW,"sukienka", "49,99",ProductType.FEMALE, (5, 1, 3, 1)),
-         new Product(ProductColor.BLACK,"spodnie", "23,00",ProductType.UNISEX, (1, 5, 3, 1)),
-         new Product(ProductColor.BLUE,"koszulka", "80,00",ProductType.UNISEX, (1, 5, 3, 0)),
-         new Product(ProductColor.RED,"sukienka", "69,99",ProductType.FEMALE, (1, 5, 3, 0)))
+                    new Product("koszulka", 39.99,ProductColor.BLUE, ProductType.FEMALE, createStock(1, 5, 3, 0)),
+         new Product("koszulka", 39.99,ProductColor.BLUE, ProductType.MALE, createStock(1, 1, 1, 2)),
+         new Product("koszulka", 50.99,ProductColor.RED, ProductType.MALE, createStock(4, 1, 31, 1)),
+         new Product("sukienka", 49.99, ProductColor.YELLOW,ProductType.FEMALE, createStock(5, 1, 3, 1)),
+         new Product("spodnie", 23.00,ProductColor.BLACK,ProductType.UNISEX,createStock(1, 5, 3, 1)),
+         new Product("koszulka", 80.00,ProductColor.BLUE,ProductType.UNISEX, createStock(1, 5, 3, 0)),
+         new Product("sukienka", 69.99,ProductColor.RED,ProductType.FEMALE, createStock(1, 5, 3, 0)));
       }
 
 
@@ -136,8 +136,3 @@ public class StreamExercisesProducts {
 
 
     }
-
-
-
-
-}
