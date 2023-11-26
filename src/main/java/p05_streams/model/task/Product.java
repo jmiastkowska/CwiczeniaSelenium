@@ -23,7 +23,7 @@ public class Product {
                 '}';
     }
 
-    public Product(String name, double price, ProductColor color, Map<ProductSize, Integer> stock) {
+    public Product(String name, double price, ProductColor color,ProductType type, Map<ProductSize, Integer> stock) {
         this.name = name;
         this.price = price;
         this.color = color;
